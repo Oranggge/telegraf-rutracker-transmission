@@ -13,7 +13,7 @@ const RedisSession = require('telegraf-session-redis')
 
 const TelegrafI18n = require('telegraf-i18n')
 
-const RutrackerApi = require('./rutracker-api')
+const RutrackerApi = require('rutracker-api-with-proxy');
 const rutracker = new RutrackerApi()
 
 const Transmission = require('transmission-promise')
