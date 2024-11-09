@@ -372,7 +372,7 @@ const searchPromise = (ctx) => {
     console.log('Incoming search request with term:', searchTerm)
     return new Promise((resolve, reject) => {
         rutrackerLoginPromise(ctx)
-            .then(() => rutracker.search({ query: searchTerm, sort: 'downloads', order: 'desc' }))
+            .then(() => rutracker.search({ query: searchTerm, sort: 'seeds', order: 'desc' }))
             .then(torrents => {
                 console.log(torrents)
                 torrents.filter(t => t.seeds > 0)
